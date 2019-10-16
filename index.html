@@ -63,15 +63,9 @@
                     <table class="table">
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col"> مدت بیکاری خدمت دهنده</th>
-                                <th scope="col">مدت ماندن مشتری در سیستم</th>
-                                <th scope="col">زمان پایان خدمت</th>
-                                <th scope="col">مدت ماندن در صف</th>
-                                <th scope="col">زمان شروع خدمت</th>
-                                <th scope="col">مدت خدمتدهی</th>
-                                <th scope="col">زمان ورود</th>
-                                <th scope="col">مدت سپری شده از آخرین ورود</th>
-                                <th scope="col">مشتری</th>
+                                <th scope="col">تخصیص اعداد تصادفی</th>
+                                <th scope="col">توزیع تجمعی</th>
+                                <th scope="col">تقاضا</th>
                               </tr>
                             </thead>
                             <tbody id="tbody_Table_X">
@@ -81,7 +75,7 @@
             </div>
             <div class="col-3"></div>
         </div>
-        <script>        
+        {% comment %} <script>        
         
         
           function set_cell_tabel_A(key) {
@@ -171,7 +165,7 @@
           // مدت بیکاری خدمت دهنده
           document.getElementById("td_"+index+"_value_8_tabel_X").innerText = 2;
         }
-
+ {% endcomment %}
 
        
         //Mohammad Eshagh Ahmadi
