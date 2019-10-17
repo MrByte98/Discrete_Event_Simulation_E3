@@ -8,20 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-        <div class="row">
-                <div class="col"></div>
-                <div class="col">توزیع مدت های بین دو ورود</div>
-                <div class="col"></div>
-                <div class="col">توزیع مدت های خدمتدهی</div>
-                <div class="col"></div>
-        </div>
-        <br>
-
         <!-- Tabel A - Tabel B -->
         <div class="row">
                 <div class="col-1"></div>
                 <div class="col-4">
-                        <table class="table">
+                        <table class="table text-center">
+                          <caption>تخصیص ارقام تصادفی برای تعیین نوع روز</caption>
                                 <thead class="thead-dark">
                                   <tr>
                                     <th scope="col">تخصیص ارقام تصادفی</th>
@@ -31,25 +23,113 @@
                                   </tr>
                                 </thead>
                                 <tbody id="tbody_Table_A">
-                                  
-                                                                 
+                                  <tr>
+                                    <td>01-35</td>
+                                    <td>0.35</td>
+                                    <td>0.35</td>
+                                    <td>خوب</td>
+                                  </tr>
+                                  <tr>
+                                      <td>36-80</td>
+                                      <td>0.80</td>
+                                      <td>0.45</td>
+                                      <td>متوسط</td>
+                                    </tr>
+                                    <tr>
+                                        <td>81-100</td>
+                                        <td>1.00</td>
+                                        <td>0.20</td>
+                                        <td>بد</td>
+                                      </tr>   
                                 </tbody>
                         </table>
                 </div>
                 <div class="col-2"></div>
                 <div class="col-4">
-                        <table class="table">
+                        <table class="table text-center">
+                          <caption>تخصیص ارقام تصادفی برای روزنامههای مورد تقاضا</caption>
                                 <thead class="thead-dark">
-                                  <tr>
-                                    <th scope="col">مدت خدمتدهی</th>
-                                    <th scope="col">ارقام تصادفی</th>
-                                    <th scope="col">مشتری</th>
-                                  </tr>
+                                    <tr>
+                                        <th  scope="col" colspan="3">تخصیص اعداد تصادفی</th>
+                                        <th scope="col" colspan="3">توزیع تجمعی</th>
+                                        <th scope="col">تقاضا</th>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col">بد</th>
+                                        <th scope="col">متوسط</th>
+                                        <th scope="col">خوب</th>
+                                        <!--  -->
+                                        <th scope="col">بد</th>
+                                        <th scope="col">متوسط</th>
+                                        <th scope="col">خوب</th>
+                                        <!--  -->
+                                        <th scope="col">----</th>
+                                      </tr>
                                 </thead>
                                 <tbody id="tbody_Table_B"> 
-                                  
-
-
+                                    <tr>
+                                      <td>01-44</td>
+                                      <td>01-10</td>
+                                      <td>01-03</td>
+                                      <td>0.44</td>
+                                      <td>0.10</td>
+                                      <td>0.03</td>
+                                      <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>45-66</td>
+                                        <td>11-28</td>
+                                        <td>04-08</td>
+                                        <td>0.66</td>
+                                        <td>0.28</td>
+                                        <td>0.08</td>
+                                        <td>50</td>
+                                      </tr>
+                                      <tr>
+                                          <td>67-82</td>
+                                          <td>29-68</td>
+                                          <td>09-23</td>
+                                          <td>0.82</td>
+                                          <td>0.68</td>
+                                          <td>0.23</td>
+                                          <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>83-82</td>
+                                            <td>69-88</td>
+                                            <td>24-43</td>
+                                            <td>0.96</td>
+                                            <td>0.88</td>
+                                            <td>0.43</td>
+                                            <td>70</td>
+                                          </tr>
+                                          <tr>
+                                              <td>95-100</td>
+                                              <td>89-96</td>
+                                              <td>44-78</td>
+                                              <td>1.00</td>
+                                              <td>0.96</td>
+                                              <td>0.78</td>
+                                              <td>80</td>
+                                            </tr>
+                                            <tr>
+                                                <td>--</td>
+                                                <td>97-100</td>
+                                                <td>79-93</td>
+                                                <td>1.00</td>
+                                                <td>1.00</td>
+                                                <td>0.93</td>
+                                                <td>90</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>--</td>
+                                                  <td>--</td>
+                                                  <td>94-100</td>
+                                                  <td>1.00</td>
+                                                  <td>1.00</td>
+                                                  <td>1.00</td>
+                                                  <td>100</td>
+                                                </tr>
                                 </tbody>
                         </table>
                 </div>
@@ -60,112 +140,118 @@
         <div class="row">
             <div class="col-3"></div>
             <div class="col-6">
-                    <table class="table">
+                    <table  class="table text-center" >
+                      <caption>شبیه سازی برای خرید 70 روزنامه</caption>
                             <thead class="thead-dark">
                               <tr>
-                                <th scope="col">تخصیص اعداد تصادفی</th>
-                                <th scope="col">توزیع تجمعی</th>
+                                <th scope="col">سود روزانه</th>
+                                <th scope="col">درآمد ناشی از فروش باطله</th>
+                                <th scope="col">سود از دست رفته</th>
+                                <th scope="col">درآمد حاصل از فروش</th>
                                 <th scope="col">تقاضا</th>
+                                <th scope="col">ارقام تصادفی برای تقاضا</th>
+                                <th scope="col">نوع روز</th>
+                                <th scope="col">ارقام تصادفی برای تعیین نوع روز</th>
+                                <th scope="col">روز</th>
                               </tr>
                             </thead>
                             <tbody id="tbody_Table_X">
-                             
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
                             </tbody>
                     </table>
             </div>
             <div class="col-3"></div>
         </div>
-        {% comment %} <script>        
+      <script>        
         
         
-          function set_cell_tabel_A(key) {
+          function Value_day(key) {
             var res = "";
-            if(key >= 1 && key <= 125)res = 1;            
-           else if(key >= 126 && key <= 250)res = 2;
-           else if(key >= 251 && key <= 375)res = 3;
-           else if(key >= 376 && key <= 500)res = 4;
-           else if(key >= 501 && key <= 625)res = 5;
-           else if(key >= 626 && key <= 750)res = 6;
-           else if(key >= 751 && key <= 875)res = 7;
-           else if(key >= 876 && key <= 1000)res = 8;
-        return res.toString();  
+            if(key >= 1 && key <= 35)res = "good";            
+           else if(key >= 36 && key <= 80)res = "medium";
+           else if(key >= 81 && key <= 100)res = "bad";
+        return res;  
           }
-          debugger
-          let strInnerHtml="<tr><td>-</td><td>-</td><td>1</td></tr>";
-          let counter = 7;
-          for (let index = 1; index <= counter; index++)
-            strInnerHtml+="<tr><td id='td_"+index+"_value_1_tabel_A'>8</td><td id='td_"+index+"_tabel_A'></td><td>"+(index + 1)+"</td></tr>";                      
-            document.getElementById("tbody_Table_A").innerHTML=strInnerHtml;
 
-            for (let index = 1; index <= counter; index++) {
-              document.getElementById("td_"+index+"_tabel_A").innerText = Math.ceil(Math.random() * (1000-1)+1);
-              document.getElementById("td_"+index+"_value_1_tabel_A").innerText = set_cell_tabel_A(Number(document.getElementById("td_"+index+"_tabel_A").innerText));                          
-            }
 
 
             // Tabel B
 
-            function set_cell_tabel_B(key_B) {
-            var res_B = "";
+            function value_request(key_B,req_str) {
+            
           //  Tabel B 
-           if(key_B >= 1 && key_B <= 10)res_B = 1;
-           else if(key_B >= 11 && key_B <= 30)res_B = 2;
-           else if(key_B >= 31 && key_B <= 60)res_B = 3;
-           else if(key_B >= 61 && key_B <= 85)res_B = 4;
-           else if(key_B >= 86 && key_B <= 95)res_B = 5;
-           else if(key_B >= 96 && key_B <= 100)res_B = 6;
+            var res_B = "";
+           if(req_str === "good")
+           {
+            if(key_B >= 1 && key_B <= 3)res_B = 40;
+            else if (key_Bey >= 4 && key_B <= 8)res_B = 50;
+            else if (key_B >= 9 && key_B <= 23)res_B= 60;
+            else if (key_B >= 24 && key_B <= 43)res_B = 70;
+            else if (key_B >= 44 && key_B <= 78)res_B = 80;
+            else if (key_B >= 79 && key_B <= 93)res_B = 90;
+            else if (key_B >= 94 && key_B <= 100)res_B = 100;
+           }
+           else if(req_str === "medium")
+           {
+            if(key_B >= 1 && key_B <= 10)res_B = 40;
+            else if (key_B >= 11 && key_B <= 28)res_B = 50;
+            else if (key_B >= 29 && key_B <= 68)res_B = 60;
+            else if (key_B >= 69 && key_B <= 88)res_B = 70;
+            else if (key_B >= 89 && key_B <= 96)res_B = 80;
+            else if (key_B >= 97 && key_B <= 100)res_B = 90;
+            //else if (key >= 94 && key <= 100)res = 100;
+           }
+           else if(req_str === "bad")
+           {
+            if(key_B >= 1 && key_B <= 44)res_B = 40;
+            else if (key_B >= 45 && key_B <= 66)res_B = 50;
+            else if (key_B >= 67 && key_B <= 82)res_B = 60;
+            else if (key_B >= 83 && key_B <= 94)res_B = 70;
+            else if (key_B >= 95 && key_B <= 100)res_B = 80;
+            //else if (key >= 79 && key <= 93)res = 90;
+           // else if (key >= 94 && key <= 100)res = 100;
+           }
         return res_B.toString();  
           }
-          debugger
-          let strInnerHtml_B="<tr><td>-</td><td>-</td><td>1</td></tr>";
-          let counter_B = 7;
-          for (let index = 1; index <= counter_B; index++){
-            strInnerHtml_B+="<tr><td id='td_"+index+"_value_1_tabel_B'>8</td><td id='td_"+index+"_tabel_B'></td><td>"+(index + 1)+"</td></tr>";                      
-            document.getElementById("tbody_Table_B").innerHTML=strInnerHtml_B;
-          }
-            for (let index = 1; index <= counter_B; index++) {
-              document.getElementById("td_"+index+"_tabel_B").innerText = Math.ceil(Math.random() * (100-1)+1);
-              document.getElementById("td_"+index+"_value_1_tabel_B").innerText = set_cell_tabel_B(Number(document.getElementById("td_"+index+"_tabel_B").innerText));                          
-            }
+          // debugger
+          // let strInnerHtml_B="<tr><td>-</td><td>-</td><td>1</td></tr>";
+          // let counter_B = 7;
+          // for (let index = 1; index <= counter_B; index++){
+          //   strInnerHtml_B+="<tr><td id='td_"+index+"_value_1_tabel_B'>8</td><td id='td_"+index+"_tabel_B'></td><td>"+(index + 1)+"</td></tr>";                      
+          //   document.getElementById("tbody_Table_B").innerHTML=strInnerHtml_B;
+          // }
+          //   for (let index = 1; index <= counter_B; index++) {
+          //     document.getElementById("td_"+index+"_tabel_B").innerText = Math.ceil(Math.random() * (100-1)+1);
+          //     document.getElementById("td_"+index+"_value_1_tabel_B").innerText = set_cell_tabel_B(Number(document.getElementById("td_"+index+"_tabel_B").innerText));                          
+          //   }
 
         //Tabel X
-        let strInnerHtml_X="<tr><td>0</td><td>4</td><td>4</td><td>0</td><td>0</td><td>4</td><td>0</td><td>-</td><td>1</td></tr>";
-        let counter_X = 7;
+        let strInnerHtml_X="";
+        let counter_X = 5;
+        debugger
         for(let index=1;index<=counter_X;index++){
-            strInnerHtml_X+="<tr><td id='td_"+index+"_value_8_tabel_X'>0</td><td id='td_"+index+"_value_7_tabel_X'>4</td><td id='td_"+index+"_value_6_tabel_X'>4</td><td id='td_"+index+"_value_5_tabel_X'>0</td><td id='td_"+index+"_value_4_tabel_X'>0</td><td id='td_"+index+"_value_3_tabel_X'>4</td><td id='td_"+index+"_value_2_tabel_X'>0</td><td id='td_"+index+"_value_1_tabel_X'>-</td><td>"+ (index+1) +"</td></tr>";                      
-            document.getElementById("tbody_Table_X").innerHTML=strInnerHtml_X;
+            strInnerHtml_X+="<tr><td></td><td ></td><td ></td><td></td><td id='request_value_str_"+index+"'></td><td id='request_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td id='day_value_str_"+index+"' ></td><td id='day_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td>"+index+"</td></tr>";                                  
+            document.getElementById("tbody_Table_X").innerHTML=strInnerHtml_X;                                    
         }
-        for(let index=1;index<=counter_X;index++){
-          //  مدت سپری شده از آخرین ورود	
-          // (td_"+index+"_value_1_tabel_A) 
-          document.getElementById("td_"+index+"_value_1_tabel_X").innerText = Number(document.getElementById("td_"+index+"_value_1_tabel_A").innerText);
-          // زمان ورود
-          // (td_"+index+"_value_2_tabel_X) + (td_"+index+"_value_1_tabel_A)
-          if (index == 1){
-            document.getElementById("td_"+index+"_value_2_tabel_X").innerText = Number("0") + Number(document.getElementById("td_"+index+"_value_1_tabel_A").innerText);
-          }
-          else{
-            document.getElementById("td_"+index+"_value_2_tabel_X").innerText = Number(document.getElementById("td_"+(index-1)+"_value_2_tabel_X").innerText) + Number(document.getElementById("td_"+index+"_value_1_tabel_A").innerText);
-          }
-          // مدت خدمت دهی
-          // (td_"+index+"_value_1_tabel_B)
-          document.getElementById("td_"+index+"_value_3_tabel_X").innerText =(Number(document.getElementById("td_"+index+"_value_1_tabel_B").innerText)) ;
-          // زمان شروع خدمت
-          // (td_"+index+"_value_6_tabel_X) - (td_"+index+"_value_7_tabel_X)
-          document.getElementById("td_"+index+"_value_4_tabel_X").innerText =Number(document.getElementById("td_"+index+"_value_2_tabel_X").innerText) + Number(document.getElementById("td_"+index+"_value_7_tabel_X").innerText) + Number(document.getElementById("td_"+index+"_value_8_tabel_X").innerText); 
-          // مدت ماندن در صف
-          // (td_"+index+"_value_4_tabel_X) - (td_"+index+"_value_2_tabel_X)
-          document.getElementById("td_"+index+"_value_5_tabel_X").innerText = Number(document.getElementById("td_"+index+"_value_4_tabel_X").innerText) - Number(document.getElementById("td_"+index+"_value_2_tabel_X").innerText); 
-          // زمان پایان خدمت
-          // (td_"+index+"_value_4_tabel_X) + (td_"+index+"_value_3_tabel_X)
-          document.getElementById("td_"+index+"_value_6_tabel_X").innerText = Number(document.getElementById("td_"+index+"_value_4_tabel_X").innerText) + Number(document.getElementById("td_"+index+"_value_3_tabel_X").innerText);
-          // مدت ماندن مشتری
-          // (td_"+index+"_value_6_tabel_X) - (td_"+index+"_value_4_tabel_X)
-          document.getElementById("td_"+index+"_value_7_tabel_X").innerText = Number(document.getElementById("td_"+index+"_value_6_tabel_X").innerText) + Number(document.getElementById("td_"+index+"_value_4_tabel_X").innerText); 
-          // مدت بیکاری خدمت دهنده
-          document.getElementById("td_"+index+"_value_8_tabel_X").innerText = 2;
+
+        for (let index = 1; index <= counter_X; index++) {
+          document.getElementById("day_value_str_"+index+"").innerText= Value_day(Number(document.getElementById("day_value_int_"+index+"").innerText));          
         }
- {% endcomment %}
+
+        for (let index = 1; index <= counter_X; index++) {
+          document.getElementById("request_value_str_"+index+"").innerText= value_request(Number(document.getElementById("request_value_int_"+index+"").innerText),document.getElementById("day_value_str_"+index+"").innerText);          
+        }
+        
 
        
         //Mohammad Eshagh Ahmadi
