@@ -10,7 +10,9 @@
 <body>
         <!-- Tabel A - Tabel B -->
         <div class="row">
-                <div class="col-1"></div>
+                <div class="col-1">
+
+                </div>
                 <div class="col-4">
                         <table class="table text-center">
                           <caption>تخصیص ارقام تصادفی برای تعیین نوع روز</caption>
@@ -138,7 +140,12 @@
         <br>
         <!-- Tabel X -->
         <div class="row">
-            <div class="col-3"></div>
+            <div class="col-3">
+                <!-- <form action="#">
+                    <input type="number" id="count_buy">
+                    <button type="button" onclick="SetCountbuy()">Submit</button>
+                  </form> -->
+            </div>
             <div class="col-6">
                     <table  class="table text-center" >
                       <caption>شبیه سازی برای خرید 70 روزنامه</caption>
@@ -156,25 +163,20 @@
                               </tr>
                             </thead>
                             <tbody id="tbody_Table_X">
-                              <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                              </tr>
+                              
                             </tbody>
                     </table>
             </div>
             <div class="col-3"></div>
         </div>
       <script>        
+
+          var buy_newspaper = 70;
         
-        
+        function SetCountbuy(value){
+          buy_newspaper = Number(document.getElementById("count_buy").value); 
+        }
+
           function Value_day(key) {
             var res = "";
             if(key >= 1 && key <= 35)res = "good";            
@@ -194,7 +196,7 @@
            if(req_str === "good")
            {
             if(key_B >= 1 && key_B <= 3)res_B = 40;
-            else if (key_Bey >= 4 && key_B <= 8)res_B = 50;
+            else if (key_B >= 4 && key_B <= 8)res_B = 50;
             else if (key_B >= 9 && key_B <= 23)res_B= 60;
             else if (key_B >= 24 && key_B <= 43)res_B = 70;
             else if (key_B >= 44 && key_B <= 78)res_B = 80;
@@ -237,10 +239,10 @@
 
         //Tabel X
         let strInnerHtml_X="";
-        let counter_X = 5;
+        let counter_X = 20;
         debugger
         for(let index=1;index<=counter_X;index++){
-            strInnerHtml_X+="<tr><td></td><td ></td><td ></td><td></td><td id='request_value_str_"+index+"'></td><td id='request_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td id='day_value_str_"+index+"' ></td><td id='day_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td>"+index+"</td></tr>";                                  
+            strInnerHtml_X+="<tr><td id='dayily_profit_"+index+"'></td><td id='income_tailing_"+index+"'></td><td id='incresing_request_"+index+"'></td><td id='income_money_"+index+"'></td><td id='request_value_str_"+index+"'></td><td id='request_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td id='day_value_str_"+index+"' ></td><td id='day_value_int_"+index+"'>"+Math.ceil(Math.random() * (100-1)+1).toString()+"</td><td>"+index+"</td></tr>";                                  
             document.getElementById("tbody_Table_X").innerHTML=strInnerHtml_X;                                    
         }
 
@@ -250,7 +252,31 @@
 
         for (let index = 1; index <= counter_X; index++) {
           document.getElementById("request_value_str_"+index+"").innerText= value_request(Number(document.getElementById("request_value_int_"+index+"").innerText),document.getElementById("day_value_str_"+index+"").innerText);          
+          
+          let b_n =Number(document.getElementById("request_value_str_"+index+"").innerText)
+          let b_n_plus = 0;
+           if (b_n >= 0 && b_n <=buy_newspaper)
+           {
+            
+              document.getElementById("income_money_"+index+"").innerText = b_n * 20 ;
+              
+              document.getElementById("incresing_request_"+index+"").innerText = 0 ;
+
+              document.getElementById("income_tailing_"+index+"").innerText = (buy_newspaper - b_n) * 2 ;
+              
+ 
+           }
+           else if (b_n > buy_newspaper)
+           {
+            document.getElementById("income_money_"+index+"").innerText = buy_newspaper * 20;
+            document.getElementById("incresing_request_"+index+"").innerText = (b_n-buy_newspaper) * 7 ;
+
+            document.getElementById("income_tailing_"+index+"").innerText = 0 ;
+           }
+
+           document.getElementById("dayily_profit_"+index+"").innerText = (Number(document.getElementById("income_money_"+index+"").innerText) - Number(910) - Number(document.getElementById("incresing_request_"+index+"").innerText) + Number(document.getElementById("income_tailing_"+index+"").innerText))
         }
+        
         
 
        
@@ -265,7 +291,6 @@
 
 </body>
 </html>
-
 
 
 
